@@ -1,0 +1,121 @@
+.sec1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+    background-color: white;
+    gap: 10px;
+    margin: auto;
+    
+}
+.sec1 img {
+    padding: 3px;
+    width: 100%;
+    
+}  
+    
+.varos{
+    margin: auto;
+    gap: 10px;   
+}
+    
+aside{
+    background-color: white;
+}
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    background-color: pink;
+   
+}
+main {
+    background-color: pink;
+    
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    
+    "n "
+    "a "
+    "f";
+}
+
+
+header, nav, article, footer, aside {
+    
+    padding: 10px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    list-style-type: none;
+    text-align: center;
+    background-color: pink;
+
+}
+nav li {
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+    
+    
+}
+
+article {
+    grid-area: a;
+}
+
+
+footer {
+    grid-area: f;
+}
+aside#jobb {
+    grid-area: j;
+}
+
+
+@media only screen and (max-width: 700px) {
+    body, main {
+      background-color: pink;
+      width: 100%;
+    }
+
+    main {
+        grid-template-columns: 1fr ;
+        grid-template-areas:
+        
+        "n n"
+        "a b"
+        "j j"
+        "f f";
+    }
+
+  }
+  
+  @media only screen and (max-width: 450px) {
+    body, main {
+      background-color: pink;
+      width: 100%;
+    }
+
+    main {
+        font-size: 12px+10vw;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        
+        "n"
+        "a"
+        "b"
+        "j"
+        "f";
+    }
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        
+    }
+}
